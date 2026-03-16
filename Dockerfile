@@ -16,17 +16,14 @@ WORKDIR /app
 COPY server/package.json ./
 RUN npm install --production
 
-COPY server/src ./src
+COPY server/index.js ./index.js
 
 # Copy built client from builder stage
-COPY --from=builder /app/server/public ./public
-
-# Serve static files from Express
-RUN echo "import express from 'express';" > /dev/null
+COPY --from=builder /app/client/dist ./public
 
 EXPOSE 8080
 
 ENV PORT=8080
 ENV NODE_ENV=production
 
-CMD ["node", "src/index.js"]
+CMD ["node", "index.js"]
