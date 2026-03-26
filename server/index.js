@@ -35,20 +35,26 @@ async function getGeoInfo(ip) {
 
 // Skip logging static assets
 const ASSET_RE = /\.(js|css|png|jpg|jpeg|svg|ico|woff2?|ttf|map)(\?.*)?$/;
+const BOT_PATHS = /wp-admin|wp-login|phpMyAdmin|\.env|setup-config/i;
+const INTERNAL_IPS = (process.env.INTERNAL_IPS || '').split(',').map(s => s.trim());
 
 // Log page visits with geo enrichment
 app.use((req, _res, next) => {
   if (ASSET_RE.test(req.path)) return next();
+  if (BOT_PATHS.test(req.path)) return next();
 
   const ip = (req.headers['x-forwarded-for'] || req.socket.remoteAddress || '').split(',')[0].trim();
+  if (INTERNAL_IPS.includes(ip)) return next();
+  
   const referrer = req.headers['referer'] || req.headers['referrer'] || 'direct';
   const userAgent = req.headers['user-agent'] || 'unknown';
+  
 
   // Fire-and-forget so geo lookup doesn't slow the response
   getGeoInfo(ip).then((geo) => {
     console.log(JSON.stringify({
       event: 'visit',
-      timestamp: new Date().toISOString(),
+      timestamp: new Date().toLocaleString('en-US', { timeZone: 'America/New_York' }),
       ip,
       referrer,
       userAgent,
