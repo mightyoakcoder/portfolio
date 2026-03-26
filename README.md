@@ -2,7 +2,7 @@
 
 A personal portfolio built to showcase my projects, skills, and background as a backend engineer.
 
-![Portfolio Screenshot](src/assets/portfolioimg.png)
+![Portfolio Screenshot](client/src/assets/portfolioimg.png)
 
 ## About
 
