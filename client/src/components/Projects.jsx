@@ -4,8 +4,8 @@ const projects = [
         description:
             "A private family photo archive built to preserve and share photos from my late father's estate. Family members can log in, browse, and upload photos in one place — something personal that also became a real exercise in full-stack and cloud development.",
         stack: [
-            'React', 'Vite', 'Node.js', 'Express', 'Firestore',
-            'Firebase Auth', 'Cloud Storage', 'Cloud Run', 'Docker', 'Cloud Build',
+            'React', 'Vite', 'Reacr Router', 'React Query', 'Node.js/Express', 'Firestore',
+            'Firebase Auth', 'Cloud Storage', 'Cloud Run', 'Secret Manager', 'Cloud Build', 'Docker',
         ],
         status: 'In progress',
         github: 'https://github.com/mightyoakcoder/snowFamilyArchive',
@@ -16,8 +16,8 @@ const projects = [
         description:
             "After tracking my daily standup updates for years in OneNote, I decided to build a simple web app to log and visualize them instead. It's a fun way to practice building something for myself, and I'm using it to experiment with data visualization and personal analytics.",
         stack: [
-            'React', 'Vite', 'Node.js', 'Express', 'Firestore',
-            'Firebase Auth', 'Cloud Storage', 'Cloud Run', 'Docker', 'Cloud Build',
+            'React', 'Vite', 'Node.js/Hono', 'TypeScript', 'Firestore', 'PostgreSQL (CloudSQL)',
+            'Cloud Run', 'Secret Manager', 'Docker',
         ],
         status: 'In progress',
         github: 'https://github.com/mightyoakcoder/logMyStandup',
@@ -28,7 +28,7 @@ const projects = [
         description:
             "A garden tracking app I built for myself to keep track of what I'm growing, when things bloom, and how to care for them. It's a work in progress, but I wanted to share it here as an example of a more personal project that I'm building primarily for fun and learning.",
         stack: [
-            'React', 'Vite', 'Node.js', 'Hono', 'CloudSQL', 'Cloud Run', 'Docker', 'Cloud Build',
+            'React', 'Vite', 'Node.js/Express', 'Firestore', 'Docker', 'Cloud Storage', 'Cloud Run', 'Secret Manager',
         ],
         status: 'In progress',
         github: 'https://github.com/mightyoakcoder/weeksInBloom',
