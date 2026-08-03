@@ -7,7 +7,7 @@ const projects = [
             'React', 'Vite', 'Reacr Router', 'React Query', 'Node.js/Express', 'Firestore',
             'Firebase Auth', 'Cloud Storage', 'Cloud Run', 'Secret Manager', 'Cloud Build', 'Docker',
         ],
-        status: 'In progress',
+        status: 'In progress - ongoing',
         github: 'https://github.com/mightyoakcoder/snowFamilyArchive',
         live: 'https://www.snowfamilyarchive.com',
     },
@@ -16,10 +16,10 @@ const projects = [
         description:
             "After tracking my daily standup updates for years in OneNote, I decided to build a simple web app to log and visualize them instead. It's a fun way to practice building something for myself, and I'm using it to experiment with data visualization and personal analytics.",
         stack: [
-            'React', 'Vite', 'Node.js/Hono', 'TypeScript', 'Firestore', 'PostgreSQL (CloudSQL)',
+            'React', 'Vite', 'Node.js/Hono', 'TypeScript', 'Firestore',
             'Cloud Run', 'Secret Manager', 'Docker',
         ],
-        status: 'In progress',
+        status: 'In progress - ongoing',
         github: 'https://github.com/mightyoakcoder/logMyStandup',
         live: 'https://www.logmystandup.com',
     },
@@ -30,7 +30,7 @@ const projects = [
         stack: [
             'React', 'Vite', 'Node.js/Express', 'Firestore', 'Docker', 'Cloud Storage', 'Cloud Run', 'Secret Manager',
         ],
-        status: 'In progress',
+        status: 'In progress - ongoing',
         github: 'https://github.com/mightyoakcoder/weeksInBloom',
         live: 'https://weeks-in-bloom-300698846147.us-central1.run.app',
     },
