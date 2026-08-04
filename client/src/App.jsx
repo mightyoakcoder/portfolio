@@ -1,21 +1,18 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { ThemeProvider, useTheme } from './context/ThemeContext'
-import NavBar from './components/NavBar'
-import About from './components/About'
-import HireMe from './components/HireMe'
-import Projects from './components/Projects'
+import Home from './pages/Home'
 import './App.css'
 
 function ThemedApp() {
-  const { theme } = useTheme()
+  const { theme, themeName } = useTheme()
   return (
-    <div style={theme}>
-      <NavBar />
+    <div className="rt" data-theme={themeName} style={theme}>
+      <div className="grain" />
       <Routes>
-        <Route path="/" element={<Navigate to="/about" replace />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/hire-me" element={<HireMe />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<Navigate to="/" replace />} />
+        <Route path="/projects" element={<Navigate to="/" replace />} />
+        <Route path="/hire-me" element={<Navigate to="/" replace />} />
       </Routes>
     </div>
   )

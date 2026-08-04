@@ -1,0 +1,38 @@
+export const projects = [
+    {
+        num: '01',
+        name: 'Snow Family Archive',
+        blurb: "A private archive for the photographs my father left behind — family signs in, browses, uploads. Firebase Auth, signed-URL uploads to Cloud Storage, Firestore metadata, deploy on push.",
+        chips: ['Firebase Auth', 'Cloud Storage', 'Firestore', 'Cloud Build'],
+        status: 'Ongoing',
+        domain: 'snowfamilyarchive.com',
+        href: 'https://www.snowfamilyarchive.com',
+    },
+    {
+        num: '02',
+        name: 'Log My Standup',
+        blurb: 'Years of standup notes, out of OneNote and into something that can answer questions. My sandbox for TypeScript, Hono and personal analytics.',
+        chips: ['TypeScript', 'Hono', 'Firestore', 'Cloud Run'],
+        status: 'Ongoing',
+        domain: 'logmystandup.com',
+        href: 'https://www.logmystandup.com',
+    },
+    {
+        num: '03',
+        name: 'There',
+        blurb: "A personal map of everywhere I want to go — named for 30 Rock's Liz Lemon's quote, 'I want to go to there,' and the broken grammar is very much on purpose. Next.js on Cloud Run, Firestore for the pins, installed to my phone as a PWA.",
+        chips: ['Next.js', 'Firestore', 'Cloud Run', 'PWA'],
+        status: 'Ongoing',
+        domain: 'there.app',
+        href: 'https://there-352474706404.us-central1.run.app',
+    },
+    {
+        num: '04',
+        name: 'Weeks In Bloom',
+        blurb: "A garden tracker for one very specific user: me. What's planted, what bloomed, what needs cutting back — and it survives every spring.",
+        chips: ['React', 'Express', 'Firestore', 'Cloud Run'],
+        status: 'Shipped',
+        domain: 'weeksinbloom.app',
+        href: 'https://weeks-in-bloom-300698846147.us-central1.run.app',
+    },
+];

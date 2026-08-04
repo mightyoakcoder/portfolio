@@ -3,3 +3,4 @@ dist/
 .env
 .env.local
 *.key.json
+design_handoff_nocturne_redesign/
