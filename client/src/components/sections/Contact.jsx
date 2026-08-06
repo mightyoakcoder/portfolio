@@ -40,7 +40,7 @@ export default function Contact() {
                 <hr className="fade" style={{ marginTop: 40 }} />
                 <div className="contact-footer">
                     <span>Becky Weeks · beckyweeks.dev</span>
-                    <span className="mono" style={{ letterSpacing: '.1em' }}>REACT · EXPRESS · CLOUD RUN</span>
+                    {/* <span className="mono" style={{ letterSpacing: '.1em' }}>REACT · NODEJS · CLOUD RUN · AI</span> */}
                 </div>
             </div>
         </section>

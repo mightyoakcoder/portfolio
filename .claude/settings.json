@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -sIL --max-time 10 \"https://example.com\")",
+      "Bash(echo \"---exit $?\")",
+      "Bash(curl -sIL -A \"Mozilla/5.0 \\(Macintosh; Intel Mac OS X 10_15_7\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0 Safari/537.36\" --max-time 15 \"https://dribbble.com/shots/16831903-Portfolio-Web-Site-Design-Landing-Page-Home-Page-UI\")",
+      "WebFetch(domain:dribbble.com)",
+      "Bash(lsof -ti:5173 -sTCP:LISTEN)",
+      "Bash(xargs -r kill)",
+      "Bash(disown)",
+      "Bash(timeout 30 bash -c 'until curl -sf http://localhost:5173 >/dev/null; do sleep 1; done')",
+      "Bash(break)",
+      "Bash(npx --yes playwright --version)",
+      "Bash(node screenshot2.js)",
+      "Bash(node screenshot3.js)",
+      "Bash(node screenshot4.js)",
+      "Bash(node screenshot5.js)",
+      "Bash(node screenshot6.js)",
+      "Bash(node inspect.js)",
+      "Bash(node inspect2.js)",
+      "Bash(node inspect3.js)",
+      "Bash(node inspect4.js)"
+    ]
+  }
+}

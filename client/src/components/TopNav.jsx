@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import ThemePicker from './ThemePicker';
 import MobileMenu from './MobileMenu';
-import { themes, useTheme } from '../context/ThemeContext';
 
 const NAV_LINKS = [
     { id: 's2', label: 'Work' },
@@ -12,8 +11,6 @@ const NAV_LINKS = [
 
 export default function TopNav({ active }) {
     const [menuOpen, setMenuOpen] = useState(false);
-    const { themeName } = useTheme();
-    const current = themes[themeName];
 
     return (
         <>
@@ -51,13 +48,7 @@ export default function TopNav({ active }) {
                     <span style={{ fontWeight: 600, fontSize: 13, letterSpacing: '.16em', textTransform: 'uppercase', marginRight: 'auto' }}>
                         Becky<span style={{ color: 'var(--ac)' }}>.</span>Weeks
                     </span>
-                    <button
-                        className="icb"
-                        onClick={() => setMenuOpen(true)}
-                        aria-label="Open theme menu"
-                    >
-                        <span style={{ width: 11, height: 11, borderRadius: '50%', background: current.swatch }} />
-                    </button>
+                    <ThemePicker compact />
                     <button
                         className="icb"
                         onClick={() => setMenuOpen(true)}

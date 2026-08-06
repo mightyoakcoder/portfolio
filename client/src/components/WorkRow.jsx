@@ -3,7 +3,7 @@ import Reveal from './Reveal';
 export default function WorkRow({ project }) {
     return (
         <Reveal>
-            <hr className="fade" />
+            <hr className="fade wr-fade" />
             <a className="wr" href={project.href} target="_blank" rel="noopener noreferrer">
                 <span className="wbar" />
                 <span className="mono wn" style={{ fontSize: 12, paddingTop: 12 }}>{project.num}</span>

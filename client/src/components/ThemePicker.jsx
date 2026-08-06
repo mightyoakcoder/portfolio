@@ -1,17 +1,23 @@
 import { Popover, PopoverButton, PopoverPanel } from '@headlessui/react';
 import { themes, useTheme } from '../context/ThemeContext';
 
-export default function ThemePicker() {
+export default function ThemePicker({ compact = false }) {
     const { themeName, setThemeName } = useTheme();
     const current = themes[themeName];
 
     return (
         <Popover style={{ position: 'relative' }}>
-            <PopoverButton className="gb" style={{ padding: '8px 12px', fontSize: 12.5, gap: 9, minHeight: 0 }}>
-                <span style={{ width: 11, height: 11, borderRadius: '50%', background: current.swatch, flex: 'none' }} />
-                <span>{current.label}</span>
-                <span style={{ opacity: .5, fontSize: 10 }}>▼</span>
-            </PopoverButton>
+            {compact ? (
+                <PopoverButton className="icb" aria-label="Change theme">
+                    <span style={{ width: 11, height: 11, borderRadius: '50%', background: current.swatch }} />
+                </PopoverButton>
+            ) : (
+                <PopoverButton className="gb" style={{ padding: '8px 12px', fontSize: 12.5, gap: 9, minHeight: 0 }}>
+                    <span style={{ width: 11, height: 11, borderRadius: '50%', background: current.swatch, flex: 'none' }} />
+                    <span>{current.label}</span>
+                    <span style={{ opacity: .5, fontSize: 10 }}>▼</span>
+                </PopoverButton>
+            )}
             <PopoverPanel
                 transition
                 anchor={{ to: 'bottom end', gap: 8 }}
